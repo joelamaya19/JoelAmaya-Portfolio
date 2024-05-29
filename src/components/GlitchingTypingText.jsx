@@ -13,8 +13,8 @@ const GlitchingTypingText = (props) => {
         $styling, // Prefix with $
         nextCharProbability = 0.75, // ??????????
         typingDuration = 3000,
-        glitchProbability = 0.85,
-        potentialGlitchInterval = 100,
+        glitchProbability = 5,
+        potentialGlitchInterval = 150,
         glitchDuration = 7000, // Set glitch duration 
     } = props;
 
@@ -23,7 +23,7 @@ const GlitchingTypingText = (props) => {
     const [slideIndex, setSlideIndex] = useState(0);
     const [glitching, setGlitching] = useState(true);
 
-    const possibleChars = "!@#$%^&*()";
+    const possibleChars = "!@#$%^&*()<>?/][{}+=_";
 
     const randomizeTextCharacter = (textToAugment) => {
         const charToReplaceIndex = Math.floor(Math.random() * textToAugment.length);
