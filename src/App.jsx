@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import GlitchingTypingText from './components/GlitchingTypingText'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +29,16 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <GlitchingTypingText 
+      element='h1'
+      $styling={{
+        color: "#0FF",
+        fontFamily: "'Share Tech Mono', monospace",
+      }}
+      glitchDuration={7000}
+      >
+        Software Developer
+        </GlitchingTypingText>
     </>
   )
 }

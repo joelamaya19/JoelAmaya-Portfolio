@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
