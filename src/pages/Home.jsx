@@ -10,7 +10,7 @@ const Home = () => {
           <GlitchingTypingText 
             element='h1'
             $styling={{
-              color: "#0FF",
+              color: "#ce0000",
               fontFamily: "'Share Tech Mono', monospace",
               fontSize: "inherit",
             }}

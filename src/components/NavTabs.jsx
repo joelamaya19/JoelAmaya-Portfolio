@@ -6,12 +6,12 @@ function NavTabs() {
 
   const getClassNames = (path) => {
     return currentPage === path
-      ? 'text-white bg-blue-600 px-3 py-2 rounded-md text-sm font-medium'
-      : 'text-gray-300 hover:text-white hover:bg-blue-500 px-3 py-2 rounded-md text-sm font-medium';
+      ? 'text-white bg-red-600 bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium transition duration-300'
+      : 'text-gray-300 hover:text-white hover:bg-red-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium transition duration-300';
   };
 
   return (
-    <nav className="bg-blue-800 p-4">
+    <nav className="bg-red-800 bg-opacity-50 backdrop-blur p-4">
       <ul className="flex space-x-4 justify-center">
         <li>
           <Link to="/" className={getClassNames('/')}>

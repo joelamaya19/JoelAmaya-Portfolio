@@ -37,26 +37,27 @@ const Projects = () => {
     <section className="project-section bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 id="projects" className="text-3xl font-bold text-gray-800 mb-6">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-1">
           {projects.map((project, index) => (
-            <a key={index} href={project.link} className="block relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-64 object-cover grayscale blur-1xl transition duration-300 hover:grayscale-0 hover:blur-0 hover:brightness-100" 
-              /> {/* Display project image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-700">{project.description}</p>
-                </div>
+            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+              <a href={project.link} className="block">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-96 object-cover grayscale blur-1xl transition duration-300" 
+                />
+              </a>
+              <div className="p-4">
+                <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-700">{project.description}</p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
+  
   
   
   
